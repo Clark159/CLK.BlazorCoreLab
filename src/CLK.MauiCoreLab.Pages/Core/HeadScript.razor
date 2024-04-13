@@ -7,7 +7,30 @@
     // Properties
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+
+
+    // Fields
+    [Inject]
+    public IJSRuntime _jsRuntime { get; set; }
+
+
+    // Methods
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Require
+        if (firstRender == false) return;
+
+        // Dispatch
+        await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('BlazorPageLoaded'));");
+    }
 }
 
 
 <SectionContent SectionId="@(HeadScriptOutlet.SectionId)" ChildContent="@ChildContent" />
+<script>
+
+    // Dispatch
+    document.addEventListener("DOMContentLoaded", function () {
+        document.dispatchEvent(new Event('BlazorPageLoaded'));
+    }, { once: true });
+</script>
