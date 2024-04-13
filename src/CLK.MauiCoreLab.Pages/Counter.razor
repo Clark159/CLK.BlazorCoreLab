@@ -5,9 +5,6 @@
     [Inject]
     public MessageService _messageService { get; set; }
 
-    [Inject]
-    public IJSRuntime _jsRuntime { get; set; }
-
 
     // Constructors
     protected override void OnInitialized()
@@ -26,17 +23,10 @@
         // Count
         this.CurrentCount += 5;
     }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('DOMContentLoaded'));");
-    }
 }
 
 
-<!-- content -->
-
-<HeadContent>
+<HeadScript>
     <script>
 
         function runScript() {
@@ -48,7 +38,7 @@
             alert(document.getElementById("runScript").textContent);
         }, { once: true });
     </script>
-</HeadContent>
+</HeadScript>
 
 <h3>@_messageService.GetValue()</h3>
 

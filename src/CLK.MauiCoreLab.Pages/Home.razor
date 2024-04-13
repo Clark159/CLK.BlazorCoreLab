@@ -1,39 +1,18 @@
 ﻿@page "/"
 @code {
 
-    // Fields
-    [Inject]
-    public MessageService _messageService { get; set; }
-
-    [Inject]
-    public IJSRuntime _jsRuntime { get; set; }
-
-
-    // Constructors
-    protected override void OnInitialized()
-    {
-
-    }
-
-
-    // Methods
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('DOMContentLoaded'));");
-    }
 }
 
 
-<!-- content -->
-
-<HeadContent>
+<HeadScript>
     <script>
 
+        // window.onload
         document.addEventListener("DOMContentLoaded", function () {
             alert("DOMContentLoaded");
         }, { once: true });
     </script>
-</HeadContent>
+</HeadScript>
 
 <h1>Hello, world!</h1>
 

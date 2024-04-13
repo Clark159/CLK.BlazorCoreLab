@@ -1,0 +1,24 @@
+﻿
+@namespace CLK.MauiCoreLab.Pages
+@code {
+
+    // Fields
+    [Inject]
+    public IJSRuntime _jsRuntime { get; set; }
+
+
+    // Properties
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+
+    // Methods
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('DOMContentLoaded'));");
+    }
+}
+
+<HeadContent>
+    @ChildContent
+</HeadContent>
