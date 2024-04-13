@@ -15,10 +15,23 @@
     // Methods
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        // Require
+        if (firstRender == false) return;
+
+        // Dispatch
         await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('BlazorPageLoaded'));");
     }
 }
 
 <HeadContent>
     @ChildContent
+    <script>
+
+        // window.onload
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // dispatch
+            document.dispatchEvent(new Event('BlazorPageLoaded'));
+        }, { once: true });
+    </script>
 </HeadContent>
