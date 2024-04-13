@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Sections
+
+@namespace CLK.MauiCoreLab.Pages
+@code {
+
+    // Properties
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
+
+
+<SectionContent SectionId="@(HeadScriptOutlet.SectionId)" ChildContent="@ChildContent" />
