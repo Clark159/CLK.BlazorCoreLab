@@ -11,7 +11,7 @@
         <BlazorWebView.RootComponents>
             <RootComponent Selector="#app" ComponentType="{x:Type local:Components.Routes}" />
             <RootComponent Selector="head::after" ComponentType="{x:Type blazor:HeadOutlet}" />
-            <RootComponent Selector="head::after" ComponentType="{x:Type blazorCore:HeadScriptOutlet}" />
+            <RootComponent Selector="#script" ComponentType="{x:Type blazorCore:PageScriptOutlet}" />
         </BlazorWebView.RootComponents>
     </BlazorWebView>
 
