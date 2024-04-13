@@ -15,7 +15,7 @@
     // Methods
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('DOMContentLoaded'));");
+        await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('BlazorPageLoaded'));");
     }
 }
 
