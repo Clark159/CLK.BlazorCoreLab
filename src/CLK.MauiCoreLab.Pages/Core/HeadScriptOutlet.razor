@@ -11,3 +11,10 @@
 
 
 <SectionOutlet SectionId="@SectionId" />
+<script>
+
+    // Dispatch
+    document.addEventListener("DOMContentLoaded", function () {
+        document.dispatchEvent(new Event('BlazorPageLoaded'));
+    }, { once: true });
+</script>
