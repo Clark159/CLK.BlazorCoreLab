@@ -33,11 +33,15 @@
             alert("Hello World");
         }
 
+        // window.onload
         document.addEventListener("BlazorPageLoaded", function () {
             
             // message
-            document.getElementById('message').innerHTML += 'BlazorPageLoaded<br>';
+            document.getElementById('message').innerHTML += 'BlazorPageLoaded<br>';            
         }, { once: true });
+
+        // razor.Loaded
+        console.log("Counter.razor Loaded")
     </script>
 </PageScript>
 
