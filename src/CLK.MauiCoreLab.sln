@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLK.MauiCoreLab.Pages", "CL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLK.MauiCoreLab.WebApp", "CLK.MauiCoreLab.WebApp\CLK.MauiCoreLab.WebApp.csproj", "{9EBD0EED-A317-42DD-8D1B-6BD15406C0D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLK.MauiCoreLab.MobileApp", "CLK.MauiCoreLab.MobileApp\CLK.MauiCoreLab.MobileApp.csproj", "{3A24636C-4928-4648-93B1-7EB2CF0703E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{9EBD0EED-A317-42DD-8D1B-6BD15406C0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EBD0EED-A317-42DD-8D1B-6BD15406C0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EBD0EED-A317-42DD-8D1B-6BD15406C0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A24636C-4928-4648-93B1-7EB2CF0703E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A24636C-4928-4648-93B1-7EB2CF0703E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A24636C-4928-4648-93B1-7EB2CF0703E6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3A24636C-4928-4648-93B1-7EB2CF0703E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A24636C-4928-4648-93B1-7EB2CF0703E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A24636C-4928-4648-93B1-7EB2CF0703E6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

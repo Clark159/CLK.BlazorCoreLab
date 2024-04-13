@@ -19,8 +19,4 @@
     <ProjectReference Include="..\CLK.MauiCoreLab\CLK.MauiCoreLab.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
 </Project>
