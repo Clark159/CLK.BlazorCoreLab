@@ -35,7 +35,8 @@
 
         document.addEventListener("BlazorPageLoaded", function () {
             
-            alert(document.getElementById("runScript").textContent);
+            // message
+            document.getElementById('message').innerHTML += 'BlazorPageLoaded<br>';
         }, { once: true });
     </script>
 </HeadScript>
@@ -47,3 +48,8 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Run .NET</button>
 
 <button class="btn btn-primary" id="runScript" onclick="runScript()">Run Script</button>
+
+<br />
+<br />
+<br />
+<p id="message"></p>
