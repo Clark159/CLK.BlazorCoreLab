@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Rendering
+@using Microsoft.AspNetCore.Components.Sections
+
+@namespace CLK.MauiCoreLab.Pages
+@code {
+
+    // Constants
+    internal static readonly object SectionId = new();
+
+
+    // Fields
+    [Inject]
+    public IJSRuntime _jsRuntime { get; set; }
+
+
+    // Methods
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Require
+        if (firstRender == false) return;
+
+        // Dispatch
+        await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('BlazorPageLoaded'));");
+    }
+}
+
+
+<SectionOutlet SectionId="@SectionId" />
+<script>
+
+    // Dispatch
+    document.addEventListener("DOMContentLoaded", function () {
+        document.dispatchEvent(new Event('BlazorPageLoaded'));
+    }, { once: true });
+</script>
