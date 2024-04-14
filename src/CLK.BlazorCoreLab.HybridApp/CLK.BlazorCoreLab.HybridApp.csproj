@@ -70,4 +70,8 @@
     <ProjectReference Include="..\CLK.BlazorCoreLab\CLK.BlazorCoreLab.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\Pages\" />
+  </ItemGroup>
+
 </Project>
