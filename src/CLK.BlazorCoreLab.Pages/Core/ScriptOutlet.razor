@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Rendering
+@using Microsoft.AspNetCore.Components.Sections
+
+@namespace CLK.BlazorCoreLab.Pages
+@code {
+
+    // Constants
+    internal static readonly object SectionId = new();
+}
+
+
+<SectionOutlet SectionId="@SectionId" />
+<script>
+
+    // Dispatch
+    document.addEventListener("DOMContentLoaded", function () {
+        document.dispatchEvent(new Event('BlazorPageLoaded'));
+    }, { once: true });
+
+    // razor.Loaded
+    console.log("ScriptOutlet.razor Loaded")
+</script>

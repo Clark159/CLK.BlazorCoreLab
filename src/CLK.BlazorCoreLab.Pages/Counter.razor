@@ -1,0 +1,59 @@
+﻿@page "/counter"
+@code {
+
+    // Fields
+    [Inject]
+    public MessageService _messageService { get; set; }
+
+
+    // Constructors
+    protected override void OnInitialized()
+    {
+
+    }
+
+
+    // Properties
+    private int CurrentCount { get; set; } = 0;
+
+
+    // Methods
+    private void IncrementCount()
+    {
+        // Count
+        this.CurrentCount += 5;
+    }
+}
+
+
+<PageScript>
+    <script>
+
+        function runScript() {
+            alert("Hello World");
+        }
+
+        // window.onload
+        document.addEventListener("BlazorPageLoaded", function () {
+            
+            // message
+            document.getElementById('message').innerHTML += 'BlazorPageLoaded<br>';            
+        }, { once: true });
+
+        // razor.Loaded
+        console.log("Counter.razor Loaded")
+    </script>
+</PageScript>
+
+<h3>@_messageService.GetValue()</h3>
+
+<p role="status">Count: @CurrentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Run .NET</button>
+
+<button class="btn btn-primary" id="runScript" onclick="runScript()">Run Script</button>
+
+<br />
+<br />
+<br />
+<p id="message"></p>
