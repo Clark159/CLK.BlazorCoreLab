@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLK.BlazorCoreLab", "CLK.Bl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLK.BlazorCoreLab.Pages", "CLK.BlazorCoreLab.Pages\CLK.BlazorCoreLab.Pages.csproj", "{7EDD88F3-4A57-44A6-8071-6A1805BB5D3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLK.BlazorCoreLab.WebApp", "CLK.BlazorCoreLab.WebApp\CLK.BlazorCoreLab.WebApp.csproj", "{F91FF1A5-F0D0-4E71-B990-A26666D5D317}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7EDD88F3-4A57-44A6-8071-6A1805BB5D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EDD88F3-4A57-44A6-8071-6A1805BB5D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EDD88F3-4A57-44A6-8071-6A1805BB5D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91FF1A5-F0D0-4E71-B990-A26666D5D317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91FF1A5-F0D0-4E71-B990-A26666D5D317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91FF1A5-F0D0-4E71-B990-A26666D5D317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91FF1A5-F0D0-4E71-B990-A26666D5D317}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

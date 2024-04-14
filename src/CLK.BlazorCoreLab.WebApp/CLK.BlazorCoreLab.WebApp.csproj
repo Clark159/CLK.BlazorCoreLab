@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CLK.BlazorCoreLab\CLK.BlazorCoreLab.csproj" />
+    <ProjectReference Include="..\CLK.BlazorCoreLab.Pages\CLK.BlazorCoreLab.Pages.csproj" />
+  </ItemGroup>
+
+</Project>
