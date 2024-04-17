@@ -1,16 +1,22 @@
 ﻿@page "/interop"
+@inject IJSRuntime _jsRuntime
+@inject IServiceProvider ServiceProvider
+
 @code {
 
-    
+    private JsInteropInvoker _interopInvoker;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _interopInvoker = new JsInteropInvoker(ServiceProvider);
+        await _jsRuntime.InvokeVoidAsync("initializeDotNetReference", DotNetObjectReference.Create(_interopInvoker));
+    }
 }
 
 
 <PageScript>
     <script>
 
-        function runScript() {
-            alert("Hello World");
-        }
 
         // window.onload
         document.addEventListener("BlazorPageLoaded", function () {
@@ -23,7 +29,7 @@
 
 <h3>Interop</h3>
 
-<button class="btn btn-primary" id="runScript" onclick="runScript()">Run Script</button>
+<button class="btn btn-primary" id="runScript" onclick="callDotNetMethodFromJS()">Run Script</button>
 
 <br />
 <br />

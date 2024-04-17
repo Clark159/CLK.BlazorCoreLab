@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="CLK.BlazorCoreLab.WebApp.styles.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <script>
+        window.initializeDotNetReference = function (dotNetRef) {
+            window.dotNetReference = dotNetRef;
+        };
+
+        window.callDotNetMethodFromJS = function () {
+            if (window.dotNetReference) {
+                window.dotNetReference.invokeMethodAsync(
+                    'SayHello',
+                    "Hello World"
+                ).then(result => {
+                    console.log('Result from .NET:', result);
+                }).catch(error => {
+                    console.error('Error calling .NET method:', error);
+                });
+            } else {
+                console.error('DotNet reference not initialized.');
+            }
+        };
+    </script>
     <HeadOutlet @rendermode="InteractiveServer" />
 </head>
 
