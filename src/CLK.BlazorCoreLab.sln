@@ -5,11 +5,11 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLK.BlazorCoreLab", "CLK.BlazorCoreLab\CLK.BlazorCoreLab.csproj", "{D0DC8D3A-08FB-4FB3-A47C-3EB5B6A468D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLK.BlazorCoreLab.Pages", "CLK.BlazorCoreLab.Pages\CLK.BlazorCoreLab.Pages.csproj", "{7EDD88F3-4A57-44A6-8071-6A1805BB5D3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLK.BlazorCoreLab.Pages", "CLK.BlazorCoreLab.Pages\CLK.BlazorCoreLab.Pages.csproj", "{7EDD88F3-4A57-44A6-8071-6A1805BB5D3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLK.BlazorCoreLab.WebApp", "CLK.BlazorCoreLab.WebApp\CLK.BlazorCoreLab.WebApp.csproj", "{F91FF1A5-F0D0-4E71-B990-A26666D5D317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLK.BlazorCoreLab.WebApp", "CLK.BlazorCoreLab.WebApp\CLK.BlazorCoreLab.WebApp.csproj", "{F91FF1A5-F0D0-4E71-B990-A26666D5D317}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLK.BlazorCoreLab.HybridApp", "CLK.BlazorCoreLab.HybridApp\CLK.BlazorCoreLab.HybridApp.csproj", "{B9ABF6E3-8069-4FD7-A7A7-41BBBB749BBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLK.BlazorCoreLab.HybridApp", "CLK.BlazorCoreLab.HybridApp\CLK.BlazorCoreLab.HybridApp.csproj", "{B9ABF6E3-8069-4FD7-A7A7-41BBBB749BBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
