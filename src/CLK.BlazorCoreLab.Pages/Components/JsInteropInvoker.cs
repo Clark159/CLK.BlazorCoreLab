@@ -17,9 +17,18 @@ namespace CLK.BlazorCoreLab.Components
         }
 
         [JSInvokable]
-        public void SayHello(string message)
+        public Task<string> SayHelloAsync(string message)
         {
-            
+            // MessageService
+            var messageService = _serviceProvider.GetService<MessageService>();
+            if(messageService == null) throw new InvalidOperationException($"{nameof(MessageService)}=null");
+
+            // Result
+            var result = messageService.GetValue();
+            if (string.IsNullOrEmpty(result) == true) throw new InvalidOperationException($"{nameof(result)}=null");
+
+            // Return
+            return Task.FromResult(result);
         }
     }
 }

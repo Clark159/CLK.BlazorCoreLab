@@ -17,15 +17,15 @@
         window.callDotNetMethodFromJS = function () {
             if (window.dotNetReference) {
                 window.dotNetReference.invokeMethodAsync(
-                    'SayHello',
+                    "SayHelloAsync",
                     "Hello World"
                 ).then(result => {
-                    console.log('Result from .NET:', result);
+                    alert("Result from .NET: "+ result);
                 }).catch(error => {
-                    console.error('Error calling .NET method:', error);
+                    alert("Error calling .NET method: "+ error);
                 });
             } else {
-                console.error('DotNet reference not initialized.');
+                alert("DotNet reference not initialized.");
             }
         };
     </script>
