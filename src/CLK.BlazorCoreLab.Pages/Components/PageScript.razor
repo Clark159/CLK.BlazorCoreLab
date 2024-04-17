@@ -4,15 +4,15 @@
 @namespace CLK.BlazorCoreLab.Components
 @code {
 
-    // Properties
-    [Parameter]
-    public RenderFragment ChildContent { get; set; }
-
-
     // Fields
     [Inject]
     public IJSRuntime _jsRuntime { get; set; }
 
+
+    // Properties
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    
 
     // Methods
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -20,7 +20,7 @@
         // Require
         if (firstRender == false) return;
 
-        // Dispatch
+        // BlazorPageLoaded
         await _jsRuntime.InvokeVoidAsync("eval", "document.dispatchEvent(new Event('BlazorPageLoaded'));");
     }
 }
